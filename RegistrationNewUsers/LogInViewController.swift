@@ -9,23 +9,43 @@ import UIKit
 
 class LogInViewController: UIViewController, UITextFieldDelegate {
     
+    //MARK: - IBOutlets
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
     @IBOutlet weak var logInButton: UIButton!
     @IBOutlet weak var helpButton: UIButton!
     
+    //MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        userNameTextField.delegate = self
-        passwordTextfield.delegate = self
-        
-        passwordTextfield.returnKeyType = UIReturnKeyType.done
-        
-        
+        settingsItems()
     }
 
+    //MARK: - IBActions
     @IBAction func registrationNewUser() {
         
+    }
+    
+    @IBAction func helpInLogin() {
+        helperNotification(with: "Do not worry, here...", message: "login: User \n password: 123")
+    }
+    
+    @IBAction func unwindForLogOut(for segue: UIStoryboardSegue) {
+        userNameTextField.text = ""
+        passwordTextfield.text = ""
+    }
+    
+    @IBAction func tapView(_ sender: Any) {
+        userNameTextField.resignFirstResponder()
+        passwordTextfield.resignFirstResponder()
+    }
+    //MARK: - Methods
+    private func settingsItems() {
+        userNameTextField.delegate = self
+        passwordTextfield.delegate = self
+        passwordTextfield.returnKeyType = UIReturnKeyType.done
+        logInButton.layer.cornerRadius = 10
+        helpButton.layer.cornerRadius = 10
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -46,15 +66,6 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    @IBAction func helpInLogin() {
-        helperNotification(with: "Do not worry, here...", message: "login: User \n password: 123")
-    }
-    
-    @IBAction func unwindForLogOut(for segue: UIStoryboardSegue) {
-        userNameTextField.text = ""
-        passwordTextfield.text = ""
-    }
-    
     //MARK: - UITextFieldDelegate
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == userNameTextField || textField == passwordTextfield {
@@ -66,6 +77,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     }
 }
 
+//MARK: - Alert Controller
 extension LogInViewController {
     func helperNotification(with title: String, message: String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -76,7 +88,5 @@ extension LogInViewController {
         alertController.addAction(alertActionOne)
         present(alertController, animated: true)
     }
-    
-    
 }
 

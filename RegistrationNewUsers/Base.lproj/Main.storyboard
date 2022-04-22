@@ -31,9 +31,11 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXz-o8-zyF">
                                         <rect key="frame" x="0.0" y="134" width="294" height="31"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Log in">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="registrationNewUser" destination="Nn4-Fr-hFg" eventType="touchUpInside" id="pIz-Hc-pbf"/>
@@ -44,9 +46,11 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2uK-tb-OH8">
                                 <rect key="frame" x="20" y="831" width="54" height="31"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Help">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="helpInLogin" destination="Nn4-Fr-hFg" eventType="touchUpInside" id="pD2-Th-Tzq"/>
@@ -55,6 +59,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Wpo-EW-ziE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="i8G-Rg-c8a" firstAttribute="centerY" secondItem="5jY-Xb-8NR" secondAttribute="centerY" id="4GO-1D-pqq"/>
                             <constraint firstItem="2uK-tb-OH8" firstAttribute="bottom" secondItem="Wpo-EW-ziE" secondAttribute="bottom" id="7ny-SU-trC"/>
@@ -64,6 +69,9 @@
                             <constraint firstItem="i8G-Rg-c8a" firstAttribute="leading" secondItem="Wpo-EW-ziE" secondAttribute="leading" constant="60" id="fQl-DA-yke"/>
                             <constraint firstItem="Wpo-EW-ziE" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2uK-tb-OH8" secondAttribute="trailing" symbolic="YES" id="szZ-u7-jNB"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="e4U-TF-uD1" appends="YES" id="Ilh-DI-Mik"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="h0r-t2-xux"/>
                     <connections>
@@ -74,6 +82,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tHs-50-yRC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="e4U-TF-uD1">
+                    <connections>
+                        <action selector="tapView:" destination="Nn4-Fr-hFg" id="Izw-gc-1x0"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="355.07246376811599" y="97.767857142857139"/>
         </scene>
@@ -148,6 +161,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
