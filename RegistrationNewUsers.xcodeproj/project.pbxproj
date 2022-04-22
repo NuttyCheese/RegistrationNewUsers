@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		891ECA992812B79E0092DD7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891ECA982812B79E0092DD7F /* AppDelegate.swift */; };
 		891ECA9B2812B79E0092DD7F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891ECA9A2812B79E0092DD7F /* SceneDelegate.swift */; };
-		891ECA9D2812B79E0092DD7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891ECA9C2812B79E0092DD7F /* ViewController.swift */; };
+		891ECA9D2812B79E0092DD7F /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891ECA9C2812B79E0092DD7F /* LogInViewController.swift */; };
 		891ECAA02812B79E0092DD7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 891ECA9E2812B79E0092DD7F /* Main.storyboard */; };
 		891ECAA22812B7A00092DD7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 891ECAA12812B7A00092DD7F /* Assets.xcassets */; };
 		891ECAA52812B7A00092DD7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 891ECAA32812B7A00092DD7F /* LaunchScreen.storyboard */; };
+		89AFA1122812D3AD00063D44 /* WelcomUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AFA1112812D3AD00063D44 /* WelcomUserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		891ECA952812B79E0092DD7F /* RegistrationNewUsers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegistrationNewUsers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		891ECA982812B79E0092DD7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		891ECA9A2812B79E0092DD7F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		891ECA9C2812B79E0092DD7F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		891ECA9C2812B79E0092DD7F /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		891ECA9F2812B79E0092DD7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		891ECAA12812B7A00092DD7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		891ECAA42812B7A00092DD7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		891ECAA62812B7A00092DD7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89AFA1112812D3AD00063D44 /* WelcomUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomUserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +60,9 @@
 			children = (
 				891ECA982812B79E0092DD7F /* AppDelegate.swift */,
 				891ECA9A2812B79E0092DD7F /* SceneDelegate.swift */,
-				891ECA9C2812B79E0092DD7F /* ViewController.swift */,
+				891ECA9C2812B79E0092DD7F /* LogInViewController.swift */,
 				891ECA9E2812B79E0092DD7F /* Main.storyboard */,
+				89AFA1112812D3AD00063D44 /* WelcomUserViewController.swift */,
 				891ECAA12812B7A00092DD7F /* Assets.xcassets */,
 				891ECAA32812B7A00092DD7F /* LaunchScreen.storyboard */,
 				891ECAA62812B7A00092DD7F /* Info.plist */,
@@ -138,8 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				891ECA9D2812B79E0092DD7F /* ViewController.swift in Sources */,
+				891ECA9D2812B79E0092DD7F /* LogInViewController.swift in Sources */,
 				891ECA992812B79E0092DD7F /* AppDelegate.swift in Sources */,
+				89AFA1122812D3AD00063D44 /* WelcomUserViewController.swift in Sources */,
 				891ECA9B2812B79E0092DD7F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
