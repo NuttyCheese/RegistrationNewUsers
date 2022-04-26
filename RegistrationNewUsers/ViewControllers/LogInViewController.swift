@@ -45,9 +45,16 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
                 profileViewController.nameProfile = user.profils.name
                 profileViewController.surnameProfile = user.profils.surname
                 profileViewController.photoName = user.profils.imageName
-            } else if let infoViewController = viewController as? InfoViewController {
-                infoViewController.infoText = user.profils.info
+            } else if let navigationViewController = viewController as? UINavigationController {
+                if let infoViewController = navigationViewController.topViewController as? InfoViewController {
+                     infoViewController.infoText = user.profils.info
+                 }
             }
+            
+            
+//            else if let infoViewController = viewController as? InfoViewController {
+//                infoViewController.infoText = user.profils.info
+//            }
         }
     }
     
