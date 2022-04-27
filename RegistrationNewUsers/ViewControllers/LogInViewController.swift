@@ -17,16 +17,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var helpButton: UIButton!
     
     //MARK: - Public properties
-    let user = Users(
-        login: "catBoris",
-        password: "132",
-        profils: Profile.init(
-            name: "Boris",
-            surname: "Cat",
-            imageName: "birman-cat",
-            info: "Равным образом новая модель организационной деятельности напрямую зависит от системы обучения кадров, соответствующей насущным потребностям. Разнообразный и богатый опыт повышение уровня..."
-        )
-    )
+    private let user = Users.verificationUsers()
     
     //MARK: - Private properties
     
@@ -50,11 +41,6 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
                      infoViewController.infoText = user.profils.info
                  }
             }
-            
-            
-//            else if let infoViewController = viewController as? InfoViewController {
-//                infoViewController.infoText = user.profils.info
-//            }
         }
     }
     

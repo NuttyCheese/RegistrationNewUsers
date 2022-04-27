@@ -17,7 +17,6 @@ class InfoViewController: UIViewController {
         super.viewDidLoad()
         
         someTextaboutMeLabel.text = infoText
-
     }
    
 }
