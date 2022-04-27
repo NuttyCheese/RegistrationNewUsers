@@ -17,9 +17,9 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var helpButton: UIButton!
     
     //MARK: - Public properties
-    private let user = Users.verificationUsers()
     
     //MARK: - Private properties
+    private let user = Users.verificationUsers()
     
     //MARK: - Override Methods
     override func viewDidLoad() {
